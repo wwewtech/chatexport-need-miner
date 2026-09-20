@@ -1,0 +1,27 @@
+{
+  "evals": [
+    {
+      "prompt": "Analyze this 500MB Telegram Desktop export containing 12 chats for tool requests and unmet needs. I want to know what people are looking for.",
+      "files": [],
+      "id": 1,
+      "expected_output": "Agent streams file in 4MB chunks with overlap tails, never loads entire file into memory, applies the need lexicon (Russian + English), captures up to 6 evidence examples per keyword, clusters hits into need themes ranked by cross-chat frequency, and grounds every theme with 2-5 verbatim quotes with dates.",
+      "name": "large_multichat_export"
+    },
+    {
+      "prompt": "Here is a 200MB Telegram export from a Russian tech community. Find repeated complaints and tool requests.",
+      "files": [],
+      "id": 2,
+      "expected_output": "Agent applies Russian need lexicon (вот бы, не хватает, бесит, надоело, задолбал, ищу инструмент, etc.), streams in chunks, clusters findings into need themes, ranks by cross-chat frequency, provides verbatim Russian quotes with dates, and ends with a Coverage check section stating which existing tools address each theme.",
+      "name": "russian_chat_need_mining"
+    },
+    {
+      "prompt": "Load this 1.2GB result.json file and analyze all messages for product opportunities.",
+      "files": [],
+      "id": 3,
+      "expected_output": "Agent REFUSES to load the entire file. Instead, reads only the first 4KB to fingerprint the chat, then streams in fixed-size chunks (e.g. 4MB). Never uses cat on the file. States the chunk-based methodology and sample coverage in the output.",
+      "name": "memory_safety_validation"
+    }
+  ],
+  "skill_name": "chatexport-need-miner",
+  "version": "1.0.0"
+}

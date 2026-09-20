@@ -1,0 +1,8 @@
+{
+  "name": "chatexport-need-miner",
+  "version": "1.0.0",
+  "group": {
+    "title": "Product Research & Need Mining",
+    "description": "Mine offline Telegram Desktop exports for unmet needs, product opportunities, and repeated complaints with quote-grounded evidence."
+  }
+}

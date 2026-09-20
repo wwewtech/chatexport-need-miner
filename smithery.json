@@ -1,0 +1,15 @@
+{
+  "name": "chatexport-need-miner",
+  "version": "1.0.0",
+  "description": "Mine offline Telegram Desktop chat exports for unmet needs and product opportunities.",
+  "tags": [
+    "data-mining",
+    "telegram",
+    "product-research",
+    "agent-skills",
+    "claude-code",
+    "cursor",
+    "antigravity"
+  ],
+  "author": "Pavel Lebedev"
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatExport Need Miner - wwewtech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #000000;
+            --bg-surface: #09090b;
+            --border-color: #27272a;
+            --text-main: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #ffffff;
+        }
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+            z-index: 100;
+        }
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1, h2, h3 {
+            font-weight: 500;
+            margin-top: 0;
+        }
+        .hero {
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+        }
+        code, pre {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+        code {
+            padding: 2px 6px;
+            font-size: 0.9em;
+        }
+        pre {
+            padding: 20px;
+            overflow-x: auto;
+        }
+        .install-box {
+            margin: 30px 0;
+        }
+        .section {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+        }
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div style="font-weight: 600;">wwewtech</div>
+            <div><a href="https://github.com/wwewtech/chatexport-need-miner" style="color: var(--text-muted); text-decoration: none;">GitHub</a></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h1>ChatExport Need Miner</h1>
+            <p>Mine offline Telegram Desktop chat exports for unmet needs, product opportunities, and repeated complaints with quote-grounded evidence.</p>
+            <div class="install-box">
+                <pre><code>npx skills add wwewtech/chatexport-need-miner</code></pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Core Features</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Chunked Streaming Pipeline</h3>
+                    <p>Process 100MB-1GB+ result.json files seamlessly. The skill reads 4MB chunks with overlap tails instead of loading the entire file, preventing context length limits and memory crashes.</p>
+                </div>
+                <div class="card">
+                    <h3>Need Lexicon</h3>
+                    <p>Detects precise intent using English ("i wish", "missing") and Russian ("не хватает", "бесит") heuristics rather than generic LLM summaries, surfacing actionable product gaps.</p>
+                </div>
+                <div class="card">
+                    <h3>Quote Grounding</h3>
+                    <p>Every identified theme must carry 2-5 verbatim quotes with dates. Never hallucinates complaints; labels unverified themes as unsupported.</p>
+                </div>
+                <div class="card">
+                    <h3>Offline & Private</h3>
+                    <p>No API keys, bots, or MTProto. Operates strictly on local JSON dumps, preserving user privacy for sensitive community exports.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Output Contract</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">The skill enforces a strict, verifiable output format grouping raw evidence into actionable opportunities.</p>
+            <pre><code>## Need themes (ranked)
+### 1. Manual multi-source curation — 42 hits across 3 chats
+- Evidence: "I wish there was a tool to curate all this manually" (2024-03-12, Chat A)
+- Evidence: "We do this by hand every day, it's so annoying" (2024-03-15, Chat B)
+- Verdict: real gap
+
+### Coverage check
+- Manual multi-source curation: no known coverage found</code></pre>
+        </div>
+    </div>
+</body>
+</html>
