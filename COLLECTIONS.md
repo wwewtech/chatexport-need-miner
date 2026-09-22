@@ -22,12 +22,12 @@ This registry catalogs **`chatexport-need-miner`** across every AI agent directo
 
 | Repository | Focus / Category | Status |
 | :--- | :--- | :--- |
-| **sickn33/agentic-awesome-skills** (46,500+ ⭐) | AAS Core / `skills/chatexport-need-miner/SKILL.md` | Prepared / Active |
-| **ComposioHQ/awesome-claude-skills** (75,000+ ⭐) | `Data & Analytics / Product Discovery` | Prepared / Active |
-| **heilcheng/awesome-agent-skills** (6,200+ ⭐) | `Data Analysis & Market Research` | Prepared / Active |
-| **VoltAgent/awesome-agent-skills** (34,500+ ⭐) | `Community Skills -> Data Analysis` | Prepared / Active |
-| **PatrickJS/awesome-cursorrules** (10,000+ ⭐) | `Data Mining / Python NLP` (`rules/chatexport-need-miner.mdc`) | Prepared / Active |
-| **BehiSecc/awesome-claude-skills** (10,000+ ⭐) | `Data Analysis & Text Mining` | Prepared / Active |
+| **sickn33/agentic-awesome-skills** (46,500+ ⭐) | AAS Core / `skills/chatexport-need-miner/SKILL.md` | [PR #1558](https://github.com/sickn33/agentic-awesome-skills/pull/1558) |
+| **ComposioHQ/awesome-claude-skills** (75,000+ ⭐) | `Data & Analytics / Product Discovery` | [PR #1958](https://github.com/ComposioHQ/awesome-claude-skills/pull/1958) |
+| **heilcheng/awesome-agent-skills** (6,200+ ⭐) | `Data Analysis & Market Research` | [PR #513](https://github.com/heilcheng/awesome-agent-skills/pull/513) |
+| **VoltAgent/awesome-agent-skills** (34,500+ ⭐) | `Community Skills -> Data Analysis` | [PR #1088](https://github.com/VoltAgent/awesome-agent-skills/pull/1088) |
+| **PatrickJS/awesome-cursorrules** (10,000+ ⭐) | `Data Mining / Python NLP` (`rules/chatexport-need-miner.mdc`) | [PR #387](https://github.com/PatrickJS/awesome-cursorrules/pull/387) |
+| **BehiSecc/awesome-claude-skills** (10,000+ ⭐) | `Data Analysis & Text Mining` | [PR #743](https://github.com/BehiSecc/awesome-claude-skills/pull/743) |
 | **rohitg00/awesome-claude-code-toolkit** (2,300+ ⭐) | `Skills -> Analytics & Research` | Prepared / Active |
 | **Prat011/awesome-llm-skills** (1,700+ ⭐) | `Text Mining & Extraction Skills` | Prepared / Active |
 | **libukai/awesome-agent-skills** (5,100+ ⭐) | `精选技能 -> 数据分析与需求挖掘` | Prepared / Active |
