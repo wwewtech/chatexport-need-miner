@@ -1,6 +1,6 @@
 ---
 name: chatexport-need-miner
-description: "Mines offline Telegram Desktop chat exports (result.json, 100MB+ dumps) for unmet market needs and product opportunities using chunked streaming, boundary-safe lexicons, and verbatim quote grounding without live APIs. Trigger phrases: mine chat export, telegram result.json, find unmet needs, analyze telegram chat."
+description: "Mines offline Telegram Desktop chat exports (result.json) for unmet market needs and product opportunities using chunked streaming and verbatim quote grounding. Trigger phrases: mine chat export, telegram result.json, find unmet needs, analyze telegram chat."
 category: development
 risk: safe
 source: community
