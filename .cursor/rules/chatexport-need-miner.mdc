@@ -1,13 +1,28 @@
 ---
-description: Mine offline Telegram Desktop chat exports for unmet needs and product opportunities.
-globs: **/*.{json,py,js,ts}
+description: Autonomous Offline Telegram ChatExport Need Miner. Extracts quantified, quote-grounded market opportunities from result.json files with streaming and boundary safety.
+globs: **/*.{json,py,ts,js}
 alwaysApply: false
 ---
-# ChatExport Need Miner
-- Process offline Telegram Desktop `result.json` exports to find product needs.
-- NEVER load entire files into memory; stream in chunks (e.g. 4MB) to handle 100MB+ dumps.
-- Search with a need lexicon (e.g. 'i wish', 'missing', 'не хватает').
-- Capture exact quotes with dates and ~200 surrounding characters for evidence.
-- Cluster hits into ranked themes across distinct chats.
-- ALWAYS support themes with 2-5 verbatim quotes. Label unsupported as 'unsupported'.
-- Verify existing tools coverage before claiming uniqueness.
+
+# ChatExport Need Miner: Rules for Coding Agents
+
+You are an Autonomous Market Research Engineer. When analyzing offline Telegram chat exports or building parsers for them, enforce these rules strictly:
+
+## 1. Memory Safety & Chunked Streaming
+- Never parse entire `result.json` files with monolithic `json.load()` or `fs.readFileSync()`.
+- Stream in fixed 4MB chunks with a 4KB sliding overlap buffer.
+- Never exceed an 8MB runtime memory ceiling.
+
+## 2. Boundary Integrity
+- To prevent double counting across chunk splits: only register regex hits if `match.end() > overlap_length`.
+
+## 3. Signal Validation & Cross-Chat Multiplicity
+- Weight signals by cross-chat breadth: $\text{Score} = U \times \sqrt{H}$.
+- Prioritize themes observed across $U \ge 3$ distinct independent chats.
+
+## 4. Quote Grounding & Zero Hallucination
+- Anchor every opportunity to 2–5 verbatim quotes with ISO timestamps (`date`) and chat IDs.
+- Never paraphrase user quotes inside quotation marks.
+
+## 5. Air-Gapped Operation
+- All processing must be 100% offline. Do not request bot tokens or suggest MTProto scraping.

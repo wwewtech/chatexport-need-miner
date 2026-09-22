@@ -1,8 +1,9 @@
-# ChatExport Need Miner
-- Process offline Telegram Desktop `result.json` exports to find product needs.
-- NEVER load entire files into memory; stream in chunks (e.g. 4MB) to handle 100MB+ dumps.
-- Search with a need lexicon (e.g. 'i wish', 'missing', 'не хватает').
-- Capture exact quotes with dates and ~200 surrounding characters for evidence.
-- Cluster hits into ranked themes across distinct chats.
-- ALWAYS support themes with 2-5 verbatim quotes. Label unsupported as 'unsupported'.
-- Verify existing tools coverage before claiming uniqueness.
+# Windsurf Rules: ChatExport Need Miner
+
+Autonomous Market Signal & Customer Need Extractor for offline Telegram Desktop `result.json` exports.
+
+1. Bounded memory: Never exceed 8MB RAM. Use chunked streaming (4MB chunk + 4KB overlap).
+2. Boundary protection: Match terminus must exceed overlap length to prevent double counts.
+3. Multiplicity scoring: Prioritize issues seen across 3+ independent chats (Score = U * sqrt(H)).
+4. Verbatim quotes: Mandatory 2-5 exact quotes with ISO timestamp per theme. Zero paraphrase.
+5. Air-gap: Strictly offline. No live bot or network API requests.

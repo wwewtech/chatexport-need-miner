@@ -1,9 +1,8 @@
 {
   "name": "@wwewtech/chatexport-need-miner",
   "version": "1.0.0",
-  "description": "Mine offline Telegram Desktop chat exports for unmet needs and product opportunities.",
-  "author": "Pavel Lebedev <pasha20051344@gmail.com> (https://wwew.tech)",
-  "license": "MIT",
+  "description": "Autonomous Offline Telegram Export Need Miner for AI Agents. Extracts quantified, quote-grounded market opportunities from result.json files.",
+  "main": "SKILL.md",
   "keywords": [
     "agent-skills",
     "skills-sh",
@@ -12,10 +11,19 @@
     "cursor",
     "windsurf",
     "telegram",
-    "need-mining",
-    "product-research",
-    "chat-export",
-    "data-mining",
-    "user-research"
-  ]
+    "market-research",
+    "text-mining",
+    "offline-analytics",
+    "developer-tools"
+  ],
+  "author": "Pavel Lebedev <pasha20051344@gmail.com> (https://wwew.tech)",
+  "license": "MIT",
+  "homepage": "https://skills.sh/wwewtech/chatexport-need-miner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wwewtech/chatexport-need-miner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wwewtech/chatexport-need-miner/issues"
+  }
 }

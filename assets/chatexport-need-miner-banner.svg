@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <style>
+      .mono { font-family: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; }
+      .title { font-weight: 700; font-size: 28px; letter-spacing: -0.03em; fill: #ededed; }
+      .sub { font-size: 14px; fill: #888888; }
+      .label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+      .code { font-size: 13px; line-height: 1.6; }
+      .red { fill: #f87171; }
+      .green { fill: #34d399; }
+      .blue { fill: #60a5fa; }
+      .dim { fill: #52525b; }
+      .text-light { fill: #e4e4e7; }
+      .amber { fill: #fbbf24; }
+    </style>
+  </defs>
+
+  <!-- Deep Obsidian Canvas -->
+  <rect width="1200" height="480" fill="#000000"/>
+
+  <!-- Outer Frame -->
+  <rect x="20" y="20" width="1160" height="440" rx="8" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Header Bar -->
+  <line x1="20" y1="76" x2="1180" y2="76" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Left Header: Project Identity -->
+  <g transform="translate(44, 48)">
+    <rect x="0" y="-14" width="22" height="22" rx="4" fill="#3b82f6"/>
+    <path d="M 6 3 L 11 -4 L 16 3 M 6 0 L 16 0" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="32" y="3" class="mono text-light" font-size="14" font-weight="600">chatexport-need-miner</text>
+    <text x="210" y="3" class="mono dim" font-size="14">/ v1.0.0</text>
+  </g>
+
+  <!-- Right Header: Status Telemetry -->
+  <g transform="translate(1156, 48)">
+    <text x="0" y="2" text-anchor="end" class="mono label dim">STREAMING ENGINE: <tspan fill="#34d399">ACTIVE (4MB CHUNK / 4KB OVERLAP)</tspan></text>
+  </g>
+
+  <!-- Split View Dividers -->
+  <line x1="600" y1="76" x2="600" y2="416" stroke="#27272a" stroke-width="1"/>
+  <line x1="20" y1="416" x2="1180" y2="416" stroke="#27272a" stroke-width="1"/>
+
+  <!-- LEFT PANE: Naive OOM Slurp (Rejected) -->
+  <g transform="translate(44, 108)">
+    <text x="0" y="0" class="mono label red">NAIVE APPROACH: IN-MEMORY OOM CRASH (REJECTED)</text>
+    
+    <g transform="translate(0, 32)" class="mono code">
+      <text y="0" class="dim">01 <tspan class="red"># 1.2GB Telegram Export dump</tspan></text>
+      <text y="24" class="dim">02 <tspan class="red">with open("result.json") as f:</tspan></text>
+      <text y="48" class="dim">03 <tspan class="red">    data = json.load(f)  # Fatal: MemoryError OOM</tspan></text>
+      <text y="72" class="dim">04 <tspan class="dim"># Hallucinating summaries without verbatim dates:</tspan></text>
+      <text y="96" class="dim">05 <tspan class="red">summary = "Users want faster tooling and better UI"</tspan></text>
+      <text y="120" class="dim">06 <tspan class="dim"># 1 noisy user = 80 spam hits elevated as #1 need</tspan></text>
+      <text y="144" class="dim">07 <tspan class="red">ranked_needs = ["Better UI"]  # Unanchored speculation</tspan></text>
+      <text y="168" class="dim">08 <tspan class="red">print("No tools exist for this problem")  # False claim</tspan></text>
+    </g>
+
+    <g transform="translate(0, 240)">
+      <rect width="510" height="42" rx="4" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+      <text x="14" y="25" class="mono red" font-size="12">&#x2717; OOM risk: 100% | Zero quote citations | Boundary blindness</text>
+    </g>
+  </g>
+
+  <!-- RIGHT PANE: Production Chunked Stream (Verified) -->
+  <g transform="translate(640, 108)">
+    <text x="0" y="0" class="mono label green">PRODUCTION: STREAMING MINER &amp; QUOTE GROUNDING</text>
+    
+    <g transform="translate(0, 32)" class="mono code">
+      <text y="0" class="dim">01 <tspan class="blue">for</tspan> chunk, overlap_len <tspan class="blue">in</tspan> stream_chunks(f, 4*1024*1024):</text>
+      <text y="24" class="dim">02     <tspan class="blue">for</tspan> m <tspan class="blue">in</tspan> NEED_LEXICON.finditer(chunk):</text>
+      <text y="48" class="dim">03         <tspan class="blue">if</tspan> m.end() &gt; overlap_len:  <tspan class="green"># Exact boundary rule</tspan></text>
+      <text y="72" class="dim">04             capture_verbatim_evidence(m, chunk)</text>
+      <text y="96" class="dim">05 <tspan class="dim"># Cross-Chat Multiplicity Law:</tspan></text>
+      <text y="120" class="dim">06 score = unique_chats * math.sqrt(verified_hits)</text>
+      <text y="144" class="dim">07 <tspan class="green">output_ranked_signals(grounded_quotes=True)</tspan></text>
+      <text y="168" class="dim">08 <tspan class="amber">audit_existing_tools(fallback="I cannot confirm this")</tspan></text>
+    </g>
+
+    <g transform="translate(0, 240)">
+      <rect width="510" height="42" rx="4" fill="#064e3b" stroke="#059669" stroke-width="1"/>
+      <text x="14" y="25" class="mono green" font-size="12">&#x2713; RAM &lt;= 8MB | Verbatim ISO date anchors | U &gt;= 3 validation</text>
+    </g>
+  </g>
+
+  <!-- Footer Telemetry -->
+  <g transform="translate(44, 442)">
+    <text class="mono dim" font-size="12">STANDARDS: <tspan class="text-light">Agent Skills / Skills.sh / Vercel</tspan></text>
+    <text x="350" class="mono dim" font-size="12">AIR-GAP: <tspan class="green">100% OFFLINE (ZERO NETWORK)</tspan></text>
+    <text x="700" class="mono dim" font-size="12">COMPATIBILITY: <tspan class="text-light">Claude Code, Antigravity, Cursor, Windsurf</tspan></text>
+    <text x="1112" text-anchor="end" class="mono green" font-size="12">&#x25CF; PRODUCTION-GRADE</text>
+  </g>
+</svg>

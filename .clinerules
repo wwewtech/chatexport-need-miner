@@ -1,8 +1,11 @@
-# ChatExport Need Miner
-- Process offline Telegram Desktop `result.json` exports to find product needs.
-- NEVER load entire files into memory; stream in chunks (e.g. 4MB) to handle 100MB+ dumps.
-- Search with a need lexicon (e.g. 'i wish', 'missing', 'не хватает').
-- Capture exact quotes with dates and ~200 surrounding characters for evidence.
-- Cluster hits into ranked themes across distinct chats.
-- ALWAYS support themes with 2-5 verbatim quotes. Label unsupported as 'unsupported'.
-- Verify existing tools coverage before claiming uniqueness.
+# Cline Rules: ChatExport Need Miner
+
+Autonomous Market Signal & Customer Need Extractor for offline Telegram Desktop `result.json` exports.
+
+- Stream all input files in 4MB chunks with 4KB overlap tail to maintain <= 8MB RAM usage.
+- Never load files > 8MB into memory at once.
+- Strictly apply the boundary terminus rule: `match.end() > overlap_size`.
+- Weight opportunities using the Cross-Chat Multiplicity Law: Score = U * sqrt(H).
+- Anchor every synthesized theme to 2–5 verbatim user quotes with ISO dates and chat names.
+- Zero hallucination: if competitor coverage or uniqueness cannot be verified, write: "I cannot confirm this".
+- Air-gapped offline analysis only.

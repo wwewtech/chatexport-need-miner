@@ -1,0 +1,28 @@
+name: Propose New Need Pattern
+description: Suggest a new phrase or regex pattern indicating customer friction or tool search
+labels: ["enhancement", "lexicon"]
+body:
+  - type: input
+    id: phrase
+    attributes:
+      label: Trigger Phrase / Substring
+      placeholder: e.g. "wish there was an alternative to"
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - Russian (RU)
+        - English (EN)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Intent Rationale & Examples
+      description: Explain why this phrase indicates commercial intent or customer pain rather than casual conversation.
+    validations:
+      required: true

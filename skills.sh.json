@@ -1,8 +1,13 @@
 {
-  "name": "chatexport-need-miner",
-  "version": "1.0.0",
-  "group": {
-    "title": "Product Research & Need Mining",
-    "description": "Mine offline Telegram Desktop exports for unmet needs, product opportunities, and repeated complaints with quote-grounded evidence."
-  }
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Offline Data Mining & Market Signals",
+      "description": "Mines massive Telegram Desktop result.json exports for unmet customer needs, product opportunities, and engineering bottlenecks with zero memory crashes.",
+      "skills": [
+        "chatexport-need-miner"
+      ]
+    }
+  ]
 }

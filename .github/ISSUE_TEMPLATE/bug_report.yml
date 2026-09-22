@@ -1,0 +1,27 @@
+name: Bug Report
+description: Report an issue, memory overflow, or parsing failure in chatexport-need-miner
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve chatexport-need-miner!
+  - type: input
+    id: environment
+    attributes:
+      label: Runtime / Agent Environment
+      description: What tool were you using? (e.g., Claude Code, Antigravity, Cursor, Windsurf, Python CLI)
+      placeholder: e.g. Claude Code v1.2 / Python 3.11
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the error, memory spike, or quote misattribution.
+    validations:
+      required: true
+  - type: textarea
+    id: sample_data
+    attributes:
+      label: Sample result.json message
+      description: Paste an anonymized snippet of the message that triggered the error.
