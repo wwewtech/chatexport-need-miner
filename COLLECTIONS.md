@@ -28,14 +28,12 @@ This registry catalogs **`chatexport-need-miner`** across every AI agent directo
 | **VoltAgent/awesome-agent-skills** (34,500+ ⭐) | `Community Skills -> Data Analysis` | [PR #1088](https://github.com/VoltAgent/awesome-agent-skills/pull/1088) |
 | **PatrickJS/awesome-cursorrules** (10,000+ ⭐) | `Data Mining / Python NLP` (`rules/chatexport-need-miner.mdc`) | [PR #387](https://github.com/PatrickJS/awesome-cursorrules/pull/387) |
 | **BehiSecc/awesome-claude-skills** (10,000+ ⭐) | `Data Analysis & Text Mining` | [PR #743](https://github.com/BehiSecc/awesome-claude-skills/pull/743) |
-| **rohitg00/awesome-claude-code-toolkit** (2,300+ ⭐) | `Skills -> Analytics & Research` | Prepared / Active |
-| **Prat011/awesome-llm-skills** (1,700+ ⭐) | `Text Mining & Extraction Skills` | Prepared / Active |
-| **libukai/awesome-agent-skills** (5,100+ ⭐) | `精选技能 -> 数据分析与需求挖掘` | Prepared / Active |
-| **skillmatic-ai/awesome-agent-skills** (670+ ⭐) | `Popular Collections / Data Discovery` | Prepared / Active |
-| **philipbankier/awesome-agent-skills** | `Domain-Specific -> Product & User Research` | Prepared / Active |
-| **karanb192/awesome-claude-skills** | `Data & Product Discovery` | Prepared / Active |
-| **spencerpauly/awesome-cursor-skills** | `Data Mining & Analysis` | Prepared / Active |
-| **jqueryscript/awesome-claude-code** (510+ ⭐) | `Agent Skills -> Analytics` | Prepared / Active |
+| **rohitg00/awesome-claude-code-toolkit** (2,300+ ⭐) | `Skills -> Analytics & Research` | [PR #805](https://github.com/rohitg00/awesome-claude-code-toolkit/pull/805) |
+| **Prat011/awesome-llm-skills** (1,700+ ⭐) | `Data & Analysis` | [PR #259](https://github.com/Prat011/awesome-llm-skills/pull/259) |
+| **libukai/awesome-agent-skills** (5,100+ ⭐) | `精选技能 -> 产品使用` | [PR #166](https://github.com/libukai/awesome-agent-skills/pull/166) |
+| **skillmatic-ai/awesome-agent-skills** (670+ ⭐) | `Popular Collections` | [PR #183](https://github.com/skillmatic-ai/awesome-agent-skills/pull/183) |
+| **spencerpauly/awesome-cursor-skills** | `Utilities` | [PR #85](https://github.com/spencerpauly/awesome-cursor-skills/pull/85) |
+| **jqueryscript/awesome-claude-code** (510+ ⭐) | `Agent Skills` | [PR #690](https://github.com/jqueryscript/awesome-claude-code/pull/690) |
 | **telegram-tools / awesome-telegram** | `Telegram Data Analysis & Export Tools` | Target Catalog |
 | **awesome-product-management** | `Customer Discovery & Feedback Mining` | Target Catalog |
 | **awesome-nlp / text-mining** | `Unstructured Conversation Need Extraction` | Target Catalog |
