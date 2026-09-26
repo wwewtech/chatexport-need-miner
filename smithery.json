@@ -3,7 +3,7 @@
   "displayName": "ChatExport Need Miner",
   "version": "1.0.0",
   "description": "Mines massive offline Telegram Desktop chat exports (result.json) for unmet needs, product opportunities, and workflow bottlenecks with chunked streaming and verbatim quote grounding.",
-  "author": "wwewtech (Pavel Lebedev)",
+  "author": "wwew.tech",
   "repository": "https://github.com/wwewtech/chatexport-need-miner",
   "homepage": "https://skills.sh/wwewtech/chatexport-need-miner",
   "license": "MIT",
